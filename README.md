@@ -1,9 +1,9 @@
 
-Sprint 1
-Meningkatnya kebutuhan Web service, tim engineer memutuskan untuk membuat swapable implementation​ untuk endpoint pencarian provinsi dan kota.<br>
-1. Membuat sumber data pencarian province & cities bisa melalui database​ atau direct API​ raja ongkir (swapable implementation). Proses swap implementasi dapat dilakukan melalui <br>konfigurasi tanpa merubah source code yang sudah dibuat.<br>
-2. Menyediakan API login agar endpoint pencarian hanya bisa diakses oleh authorized user saja.<br>
-3. Membuat unit test / API test agar web service tetap reliable & maintainable<br>
+Sprint 2
+- Membuat sumber data pencarian province & cities bisa melalui database​ atau direct API​ raja ongkir (swapable implementation). Proses swap implementasi dapat dilakukan melalui <br>
+konfigurasi tanpa merubah source code yang sudah dibuat.<br>
+- Menyediakan API login agar endpoint pencarian hanya bisa diakses oleh authorized user saja.<br>
+- Membuat unit test / API test agar web service tetap reliable & maintainable<br>
 <br><br><br>
 cara menginstall<br>
 1. clone repositori<br>
