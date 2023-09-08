@@ -1,10 +1,10 @@
 
 Sprint 1
-Integrasi dengan API province & city Rajaongkir (paket starter)<br>
+- Integrasi dengan API province & city Rajaongkir (paket starter)<br>
 https://rajaongkir.com/dokumentasi/starter<br>
-Membuat artisan command​ yg melakukan fetching API data provinsi & kota dan data
+- Membuat artisan command​ yg melakukan fetching API data provinsi & kota dan data
 disimpan ke dalam database.<br>
-Membuat REST API untuk pencarian provinsi & kota dengan endpoint berikut:<br>
+- Membuat REST API untuk pencarian provinsi & kota dengan endpoint berikut:<br>
 a. [GET] /search/provinces?id={province_id} <br>
 b. [GET] /search/cities?id={city_id} <br>
 <br><br><br>
