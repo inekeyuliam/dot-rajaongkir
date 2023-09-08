@@ -11,7 +11,6 @@ class RajaOngkirService
         $response = Http::get('https://api.rajaongkir.com/starter/province', [
             'id' => $provinceId,
         ]);
-        var_dump($response->json());exit;
         return $response->json();
     }
 

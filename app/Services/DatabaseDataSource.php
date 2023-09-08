@@ -15,7 +15,7 @@ class DatabaseDataSource
         // if (!$province) {
         //     return response()->json(['message' => 'Province not found'], 404);
         // }
-        // return response()->json($province);
+        // return response()->json($pr÷ovince);
         
     }
 

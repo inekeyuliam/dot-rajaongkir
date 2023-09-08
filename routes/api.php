@@ -18,18 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('/provinces',ProvinceController::class);
-// // Province search
-// Route::get('/provinces', 'ProvinceController@search');
+// Province search
+Route::get('/provinces', 'ProvinceController@search');
 
-// // City search
-// Route::get('/cities', 'CityController@search');
-
-
-Route::post('login', 'AuthController@login');
-Route::post('register', 'AuthController@register');
-
-Route::middleware('auth:api')->group(function () {
-    Route::get('/provinces', 'ProvinceController@search');
-    Route::get('/cities', 'CityController@search');
-});
+// City search
+Route::get('/cities', 'CityController@search');

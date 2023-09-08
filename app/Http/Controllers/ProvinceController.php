@@ -20,7 +20,7 @@ class ProvinceController extends Controller
     public function get_province()
     {
         $response   = Http::get("https://api.rajaongkir.com/starter/province",[
-            'key' => '0df6d5bf733214af6c6644eb8717c92c',
+            'key' => env('APIKEY_RAJAONGKIR'),
         ]);
         $statusCode = $response->status();
         $headers = $response->headers();
