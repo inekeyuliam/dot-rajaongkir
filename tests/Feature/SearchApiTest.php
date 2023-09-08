@@ -19,9 +19,18 @@ class SearchApiTest extends TestCase
         parent::setUp();
 
         $dataSourceMock = Mockery::mock(DatabaseDataSource::class);
-        $province = new Province(1, 'Sample Province Data', 1);
-        $city = new City(1, 'Sample Province Data', 1,'Kabupaten',1,1,);
+        $city = new City();
+        $city->id = 1;
+        $city->name = 'Sample Province Data';
+        $city->city_id = 1;
+        $city->type = 'Kabupaten';
+        $city->province_id = 1;
+        $city->postal_code = 12345; 
 
+        $province = new Province();
+        $province->id = 1;
+        $province->name = 'Sample Province Data';
+        $province->province_id = 1;
         $dataSourceMock->shouldReceive('getCityById')->andReturn($city);
         $dataSourceMock->shouldReceive('getProvinceById')->andReturn($province);
 
@@ -41,7 +50,10 @@ class SearchApiTest extends TestCase
         $this->actingAs($user, 'api');
 
         $dataSourceMock = Mockery::mock(DatabaseDataSource::class);
-        $province = new Province(1, 'Sample Province Data', 1);
+        $province = new Province();
+        $province->id = 1;
+        $province->name = 'Sample Province Data';
+        $province->province_id = 1;
         $dataSourceMock->shouldReceive('getProvinceById')->andReturn($province);
 
         $this->app->instance(DatabaseDataSource::class, $dataSourceMock);
@@ -61,7 +73,13 @@ class SearchApiTest extends TestCase
         $this->actingAs($user, 'api');
 
         $dataSourceMock = Mockery::mock(DatabaseDataSource::class);
-        $city = new City(1, 'Sample Province Data', 1,'Kabupaten',1,1,);
+        $city = new City();
+        $city->id = 1;
+        $city->name = 'Sample Province Data';
+        $city->city_id = 1;
+        $city->type = 'Kabupaten';
+        $city->province_id = 1;
+        $city->postal_code = 12345; 
         
         $dataSourceMock->shouldReceive('getCityById')->andReturn($city);
         $this->app->instance(DatabaseDataSource::class, $dataSourceMock);

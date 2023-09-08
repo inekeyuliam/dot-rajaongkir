@@ -19,12 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/provinces',ProvinceController::class);
-// // Province search
-// Route::get('/provinces', 'ProvinceController@search');
-
-// // City search
-// Route::get('/cities', 'CityController@search');
-
 
 Route::post('login', 'AuthController@login');
 Route::post('register', 'AuthController@register');
